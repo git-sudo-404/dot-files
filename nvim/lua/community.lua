@@ -22,6 +22,19 @@ return {
   },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require("rose-pine").setup {
+        -- ...
+      }
+
+      -- vim.cmd "colorscheme rose-pine"
+    end,
+  },
+  {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -31,7 +44,47 @@ return {
         -- ...
       }
 
-      vim.cmd "colorscheme github_dark"
+      -- vim.cmd "colorscheme github_dark"
     end,
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+    -- use opts = {} for passing setup options
+    -- this is equivalent to setup({}) function
+  },
+  { "echasnovski/mini.nvim", version = "*" },
+  -- Using lazy.nvim
+  {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("bamboo").setup {
+        -- optional configuration here
+      }
+      require("bamboo").load()
+    end,
+  },
+  {
+    "thesimonho/kanagawa-paper.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      -- "ibhagwan/fzf-lua",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    opts = {
+      -- configuration goes here
+    },
   },
 }
