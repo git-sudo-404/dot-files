@@ -2,7 +2,7 @@
 return {
   "AstroNvim/astroui",
   opts = {
-    colorscheme = "gruvbox", -- Default colorscheme
+    colorscheme = "rose-pine", -- Default colorscheme
     highlights = {},
     oxocarbon = { -- Oxocarbon-specific overrides
     },

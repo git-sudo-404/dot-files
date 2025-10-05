@@ -24,13 +24,13 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    lazy = true, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require("rose-pine").setup {
         -- ...
       }
-
+      require("rose-pine").load()
       -- vim.cmd "colorscheme rose-pine"
     end,
   },
@@ -61,10 +61,10 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      require("bamboo").setup {
-        -- optional configuration here
-      }
-      require("bamboo").load()
+      -- require("bamboo").setup {
+      -- optional configuration here
+      -- }
+      -- require("bamboo").load()
     end,
   },
   {
