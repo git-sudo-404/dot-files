@@ -319,8 +319,7 @@ return {
           ["<C-a>"] = { "<Home>", desc = "Move to start of line" },
 
           -- Add other insert mode mappings here
-          vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { noremap = true, silent = true })
-
+          vim.keymap.set("t", "jk", [[<C-\><C-n>]], { noremap = true, silent = true }),
         },
 
         -- Visual Mode Mappings

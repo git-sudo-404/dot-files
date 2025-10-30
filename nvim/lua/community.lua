@@ -28,9 +28,58 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require("rose-pine").setup {
-        -- ...
+        variant = "moon", -- Start with the moon variant
+
+        -- Disable the default background to apply your override
+        disable_background = true,
+
+        highlight_groups = {
+          -- Your original overrides
+          Normal = { bg = "#111111" },
+          NormalNC = { bg = "#111111" },
+
+          -- ADD THESE LINES:
+
+          -- 1. For the cursor line
+          CursorLine = { bg = "#121212" },
+
+          -- 2. For the bufferline "tab bar"
+          -- This sets the background for the whole bar
+          BufferLineFill = { bg = "#111111" },
+          -- This sets the background for inactive tabs
+          BufferLineBuffer = { bg = "#111111" },
+          -- This sets the background for the tab in view, but not focused
+          BufferLineBufferVisible = { bg = "#111111" },
+          -- This clears the background for the currently selected tab
+          BufferLineBufferSelected = { bg = "#111111" },
+
+          -- ADD THESE LINES for the status line (at the bottom)
+          StatusLine = { bg = "#111111" },
+          StatusLineNC = { bg = "#111111" },
+
+          -- ADD THESE: Winbar (the "Config" bar)
+          WinBar = { bg = "#111111" },
+          WinBarNC = { bg = "#111111" },
+
+          -- ADD THESE: Fallbacks for the native tabline
+          TabLine = { bg = "#111111" }, -- Inactive tab background
+          TabLineSel = { bg = "#111111" }, -- Active tab background
+          TabLineFill = { bg = "#111111" }, -- The empty space on the tab bar
+
+          -- ADD THESE: For floating windows (Telescope, etc.)
+          NormalFloat = { bg = "#111111" },
+          FloatBorder = { bg = "#111111" },
+          -- Add Telescope-specific groups just in case
+          TelescopeNormal = { bg = "#111111" },
+          TelescopeBorder = { bg = "#111111" },
+          TelescopePromptNormal = { bg = "#111111" },
+          TelescopeResultsNormal = { bg = "#111111" },
+
+          -- ADD THESE: For the built-in terminal
+          ToggleTermFloat = { bg = "#111111" },
+        },
       }
-      require("rose-pine").load()
+      -- require("rose-pine").load()
       -- vim.cmd "colorscheme rose-pine"
     end,
   },
