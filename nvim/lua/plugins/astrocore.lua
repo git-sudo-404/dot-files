@@ -39,17 +39,17 @@ return {
 
           -- Show Game Stats
 
-          ["<Leader>gs"] = {
+          ["<Leader>ts"] = {
             function() require("triforce").show_profile() end,
             desc = "Show triforce profile",
           },
 
-          ["<Leader>grs"] = {
+          ["<Leader>trs"] = {
             function() require("triforce").reset_stats() end,
             desc = "Reset triforce stats",
           },
 
-          ["<Leader>gS"] = {
+          ["<Leader>tS"] = {
             function() require("triforce").save_stats() end,
             desc = "Save triforce stats",
           },
