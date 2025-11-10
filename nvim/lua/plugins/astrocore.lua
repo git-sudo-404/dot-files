@@ -34,6 +34,26 @@ return {
       mappings = {
         -- Normal Mode Mappings
         n = {
+
+          -- GAMIFIED PLUGIN MAPPINGS
+
+          -- Show Game Stats
+
+          ["<Leader>gs"] = {
+            function() require("triforce").show_profile() end,
+            desc = "Show triforce profile",
+          },
+
+          ["<Leader>grs"] = {
+            function() require("triforce").reset_stats() end,
+            desc = "Reset triforce stats",
+          },
+
+          ["<Leader>gS"] = {
+            function() require("triforce").save_stats() end,
+            desc = "Save triforce stats",
+          },
+
           -- Save file with Cmd+S (useful on macOS)
           ["<D-s>"] = {
             function()
