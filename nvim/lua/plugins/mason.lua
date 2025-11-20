@@ -1,4 +1,3 @@
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -11,7 +10,8 @@ return {
       ensure_installed = {
         "lua_ls",
         "ts_ls",
-        "tailwindcss"
+        "tailwindcss",
+        -- "yml-language-server",
         -- add more arguments for adding more language servers
       },
     },

@@ -9,16 +9,31 @@ return {
     devicons.setup {
       -- You can override any icon or color here
       override_by_filename = {
-        ["docker-compose.yml"] = {
-          icon = "", -- The docker whale icon
-          color = "#e03c3c", -- A red color
-          name = "DockerComposeYml", -- A unique name for the highlight group
-        },
         ["docker-compose.yaml"] = {
-          icon = "",
-          color = "#e03c3c",
-          name = "DockerComposeYaml",
+          icon = "", -- The docker whale icon
+          color = "red", -- A red color
+          name = "DockerComposeYaml", -- A unique name for the highlight group
         },
+        [".dockerignore"] = {
+          icon = "",
+          color = "black",
+          name = "DockerIgnore",
+        },
+        ["docker-compose.db.yaml"] = {
+          icon = "",
+          color = "darkorange",
+          name = "DockerComposeDBYaml",
+        },
+        ["docker-compose.dev.yaml"] = {
+          icon = "",
+          color = "lightgreen",
+          name = "DockerComposeDevYaml",
+        },
+        -- [".yaml"] = {
+        --   icon = "",
+        --   color = "#e03c3c",
+        --   name = "DockerComposeYaml",
+        -- },
       },
       -- You can also override by file extension
       override_by_extension = {

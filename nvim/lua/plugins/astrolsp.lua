@@ -43,6 +43,14 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      yamlls = {
+        settings = {
+          yaml = {
+            -- This tells the LSP to use schemas for docker-compose, etc.
+            schemas = require("schemastore").yaml.schemas(),
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {

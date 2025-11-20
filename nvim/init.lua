@@ -15,6 +15,10 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.o.tabstop = 4 -- Number of visual spaces per tab
+vim.o.shiftwidth = 4 -- Number of spaces to use for autoindent
+vim.keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+
 require "lazy_setup"
 require "polish"
 -- -- Install without configuration
