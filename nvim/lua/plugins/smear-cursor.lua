@@ -2,23 +2,28 @@ return {
   "sphamba/smear-cursor.nvim",
 
   opts = {
-    -- 1. Fire Color
-    cursor_color = "#ff4000",
+    -- Smear cursor when switching buffers or windows.
+    smear_between_buffers = true,
 
-    -- 2. STOP THE GLITCH (The most important fix)
-    -- This stops the plugin from hacking the text under your cursor
-    hide_target_hack = false,
+    -- Smear cursor when moving within line or to neighbor lines.
+    -- Use `min_horizontal_distance_smear` and `min_vertical_distance_smear` for finer control
+    smear_between_neighbor_lines = true,
 
-    -- 3. Disable in Insert Mode
-    smear_insert_mode = false,
+    -- Draw the smear in buffer space instead of screen space when scrolling
+    scroll_buffer_space = true,
 
-    -- 4. Physics (Keep it snappy)
-    stiffness = 0.6,
-    trailing_stiffness = 0.3,
-    trailing_exponent = 2,
-
-    -- 5. Rendering
-    -- Keep legacy support if you like the blocky fire look
+    -- Set to `true` if your font supports legacy computing symbols (block unicode symbols).
+    -- Smears will blend better on all backgrounds.
     legacy_computing_symbols_support = true,
+
+    -- Smear cursor in insert mode.
+    -- See also `vertical_bar_cursor_insert_mode` and `distance_stop_animating_vertical_bar`.
+    smear_insert_mode = true,
+
+    cursor_color = "#ff8800",
+    stiffness = 0.6,
+    trailing_stiffness = 0.1,
+    trailing_exponent = 5,
+    gamma = 1,
   },
 }
