@@ -19,21 +19,40 @@ vim.o.tabstop = 4 -- Number of visual spaces per tab
 vim.o.shiftwidth = 4 -- Number of spaces to use for autoindent
 vim.keymap.set({ "n", "i" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 
+-- -- =========================================================================
+-- -- 🎯 NEOCONF TRANSPARENCY FIX
+-- -- =========================================================================
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = function()
+--     -- Clear background for standard buffers and floating splits
+--     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--
+--     -- Clear background specifically for Neo-tree file explorer panels
+--     vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { bg = "none" })
+--   end,
+-- })
+
 require "lazy_setup"
 require "polish"
 -- -- Install without configuration
 -- { "projekt0n/github-nvim-theme", name = "github-theme" }
 -- -- Or with configuration
 -- {
---   "projekt0n/github-nvim-theme",
---   name = "github-theme",
---   lazy = false, -- make sure we load this during startup if it is your main colorscheme
---   priority = 1000, -- make sure to load this before all the other start plugins
---   config = function()
---     require("github-theme").setup {
---       -- ...
---     }
+--    "projekt0n/github-nvim-theme",
+--    name = "github-theme",
+--    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--    priority = 1000, -- make sure to load this before all the other start plugins
+--    config = function()
+--      require("github-theme").setup {
+--        -- ...
+--      }
 --
---     vim.cmd "colorscheme github_dark"
---   end,
+--      vim.cmd "colorscheme github_dark"
+--    end,
 -- }
