@@ -11,6 +11,7 @@ return {
         "lua_ls",
         "ts_ls",
         "tailwindcss",
+        "jdtls",
         -- "yml-language-server",
         -- add more arguments for adding more language servers
       },
