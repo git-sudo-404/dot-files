@@ -17,9 +17,9 @@ size = 20
 dynamic_padding = false
 decorations = "buttonless"
 startup_mode = "SimpleFullScreen"
-padding = { x = 2, y = 0 }
+padding = { x = 0, y = 0 }
 blur = true # Enforces macOS to blur the background behind the transparency
-# opacity = 0.70 # 🎯 REQUIRED: Tells Alacritty to allow window transparency
+opacity = 0.9 # 🎯 REQUIRED: Tells Alacritty to allow window transparency
 
 [colors.primary]
 # 🎯 FIXED: Changed '0x0f0f0f80' to a standard '#' web hex string

@@ -12,6 +12,7 @@ return {
         "ts_ls",
         "tailwindcss",
         "jdtls",
+        "rust_analyzer",
         -- "yml-language-server",
         -- add more arguments for adding more language servers
       },

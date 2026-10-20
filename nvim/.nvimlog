@@ -1,2 +1,6 @@
 WRN 2026-10-15T20:04:51.564 ?.19854    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/xVUFUO/nvim.19854.0
 WRN 2026-10-15T20:11:07.907 ?.22220    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/rVo4kY/nvim.22220.0
+WRN 2026-10-17T05:07:20.512 ?.18585    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/1ricbm/nvim.18585.0
+WRN 2026-10-17T05:13:05.971 ?.19839    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/yP3AgA/nvim.19839.0
+WRN 2026-10-17T05:13:20.044 ?.19853    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/kdssQe/nvim.19853.0
+WRN 2026-10-17T05:18:23.349 ?.20403    server_start:199: Failed to start server: operation not permitted: /var/folders/tw/9hfrkrq92l162h5zw1g8c96w0000gn/T/nvim.chiranjeevprasannaavv/CXwgGx/nvim.20403.0
